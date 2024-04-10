@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sananda Baidya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Orbitron:wght@400;600&&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <div class="content">
+
+            <div class="img">
+                <div class="img__photo"></div>
+            </div>
+
+            <div class="row2">
+                <div class="text">
+                    <p class="text__name">Sananda</p>
+                    <p class="text__subtitle">Fashion & Lifestyle Accessories <br>Designer</p>
+                </div>
+                
+                <div class="name">
+                    <p>Sanada</p>
+                </div>
+        
+                <div class="nav">
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="../portfolio/portfolio_jewel.html">Portfolio</a></li>
+                        <li><a href="../about/about.html">About</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    TweenMax.to('.left', 2, {
+      delay: .8,
+      width: '50%',
+      ease: Power2.easeInOut
+    })
+
+    TweenMax.to('.right', 2, {
+      delay: .6,
+      width: '50%',
+      ease: Power3.easeInOut
+    })
+
+    TweenMax.to('.img__photo', 2, {
+      delay: 1.5,
+      width: '100%',
+      ease: Power2.easeInOut
+    })
+
+    TweenMax.staggerFrom('.nav ul li', 2, {
+      delay: 1,
+      x: 1000,
+      ease: Circ.easeInOut
+    }, 0.08)
+
+    TweenMax.from('.text p', 2, {
+      delay: .7,
+      x: 1000,
+      ease: Circ.easeInOut
+    })
+
+    TweenMax.from('.name', 2, {
+      delay: 1.5,
+      x: -600,
+      ease: Circ.easeInOut
+    })
+
+</script>
+</html>

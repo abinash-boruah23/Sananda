@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFE2E2;
+  overflow-x: hidden;
+}
+
+.top {
+  height: 45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top .text {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #7D5A5A;
+  letter-spacing: 12px;
+}
+.top .text h1 {
+  font-size: 11rem;
+}
+.top .text h2 {
+  margin-top: 1.5rem;
+  font-size: 4.2rem;
+  letter-spacing: 3px;
+}
+
+.bg {
+  height: 90vh;
+  background-image: url("../assets/about_ai-upscale.png");
+  background-position: center 350px;
+  background-size: 130vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: the-animation linear;
+  animation-timeline: view();
+  animation-iteration-count: 1;
+}
+@keyframes the-animation {
+  100% {
+    background-size: 100vw;
+    background-position: center -450px;
+  }
+}
+
+.line {
+  display: block;
+  content: "";
+  height: auto;
+  width: 2px;
+  background: #7D5A5A;
+}
+.line--horizontal {
+  display: block;
+  content: "";
+  width: auto;
+  height: 2px;
+  background: #7D5A5A;
+}
+
+.bottom {
+  font-family: "Poppins", sans-serif;
+  color: #7D5A5A;
+  background: #FDEFEF;
+  padding: 0 7rem;
+}
+.bottom .about-me {
+  display: flex;
+  padding: 7rem 0;
+}
+.bottom .about-me .left {
+  font-size: 3rem;
+  font-weight: 300;
+  width: 59%;
+  letter-spacing: 0px;
+  margin-right: 5rem;
+}
+.bottom .about-me .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 41%;
+}
+.bottom .about-me a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #7D5A5A;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+  background: #eac8c8;
+  padding: 1rem 3rem;
+  transition: background 0.15s ease-in-out;
+  margin-bottom: 6rem;
+}
+.bottom .about-me a svg {
+  margin-right: 1rem;
+}
+.bottom .about-me a:hover {
+  background: #c89f9f;
+  cursor: pointer;
+}
+.bottom .edu {
+  display: flex;
+  padding: 7rem 0;
+}
+.bottom .edu--experience, .bottom .edu--education {
+  flex: 1;
+  padding: 0 10rem;
+}
+.bottom .edu--experience h1, .bottom .edu--education h1 {
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  font-weight: lighter;
+  margin-bottom: 5rem;
+}
+.bottom .edu--experience ul, .bottom .edu--education ul {
+  list-style: none;
+}
+.bottom .edu--experience ul li, .bottom .edu--education ul li {
+  margin-bottom: 4.5rem;
+}
+.bottom .edu--experience .position, .bottom .edu--experience .degree, .bottom .edu--education .position, .bottom .edu--education .degree {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.bottom .edu--experience .company, .bottom .edu--experience .school, .bottom .edu--education .company, .bottom .edu--education .school {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.bottom .edu--experience .duration, .bottom .edu--experience .info, .bottom .edu--education .duration, .bottom .edu--education .info {
+  font-size: 1.25rem;
+}
+.bottom .apps--logo svg {
+  width: 50px;
+  height: 50px;
+  fill: #7D5A5A;
+}
+
+.skills {
+  background: #7D5A5A;
+  margin: 0 -7rem;
+  width: 100vw;
+}
+.skills--container {
+  display: flex;
+  color: #FDEFEF;
+  animation: text-animation linear;
+  animation-timeline: view();
+  animation-iteration-count: 1;
+}
+@keyframes text-animation {
+  100% {
+    transform: translateX(-15rem);
+  }
+}
+.skills--text {
+  font-size: 12.5rem;
+  margin-right: 4rem;
+  font-weight: bold;
+}
+
+.apps {
+  padding: 12rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.apps--app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+.apps--name {
+  font-size: 2.5rem;
+  margin: 2rem 0 5rem 0;
+}
+
+@media only screen and (max-width: 1150px) {
+  .bottom .about-me .left {
+    font-size: 2.5rem;
+  }
+  .bottom .edu--experience, .bottom .edu--education {
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .bottom {
+    padding: 7rem;
+  }
+  .bottom .about-me, .bottom .edu {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom .about-me .left, .bottom .edu .left {
+    width: 100%;
+    margin-right: 0;
+  }
+  .bottom .about-me > *, .bottom .edu > * {
+    margin: 3rem 0;
+  }
+  .line {
+    height: 2px;
+    width: 100%;
+    padding: 0;
+  }
+}
