@@ -1,12 +1,32 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+}
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4bedc2;
+  width: 0%;
+  height: 100%;
+}
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .wrapper {
@@ -33,8 +53,6 @@ html {
 }
 
 .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   bottom: 0%;
   width: 100%;
@@ -46,9 +64,8 @@ html {
   width: 60%;
   margin-left: 10%;
 }
-
 .img__photo {
-  background-image: url("./SNOW_20220711_125420_330.jpeg");
+  background-image: url("../assets/SNOW_20220711_125420_330.jpeg");
   background-size: cover;
   width: 0%;
   height: 100%;
@@ -60,26 +77,22 @@ html {
   bottom: 18%;
   text-transform: uppercase;
   font-size: 1.6rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   letter-spacing: 7px;
   font-weight: lighter;
   margin-left: 12rem;
 }
-
 .nav ul {
   list-style: none;
 }
-
 .nav li {
   margin-top: 1.85rem;
 }
-
 .nav a {
   text-decoration: none;
   color: #5E454B;
   position: relative;
 }
-
 .nav a::before {
   position: absolute;
   left: -7rem;
@@ -88,20 +101,18 @@ html {
   background: #5E454B;
   width: 0rem;
   height: 2px;
-  -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-
 .nav a:hover {
   font-weight: 900;
 }
-
 .nav a:hover::before {
   width: 5rem;
 }
 
 .row2 {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   position: relative;
 }
 
@@ -111,16 +122,14 @@ html {
   left: -25rem;
   top: 17.5%;
 }
-
 .text__name {
   text-transform: uppercase;
   font-size: 12rem;
 }
-
 .text__subtitle {
   margin-top: -1.5rem;
   font-size: 2.25rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .name {
